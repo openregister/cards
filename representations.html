@@ -1,0 +1,288 @@
+<!doctype html> <html>
+<head>
+<style>
+body {
+  font-family: "San Francisco Display", "Helvetica Neue", sans-serif;
+}
+.page {
+  width: 594mm;
+  height: 210mm;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+.card {
+  border: 5mm solid #000000;
+  padding: 0 5mm 5mm;
+  width: 150mm;
+  height: 150mm;
+  float: left;
+  overflow: hidden;
+  position: relative;
+}
+h2 {
+  font-size: 20mm;
+  line-height: 0mm;
+}
+.example {
+  width: 100%;
+  overflow: hidden;
+  clear: both;
+  font-size: 3mm;
+  position: absolute;
+  bottom: -5mm;
+  left: 0;
+  padding: 5mm;
+  height: 90mm;
+  background-color: #FCEEDB;
+}
+dl {
+  width: 100%;
+}
+dt {
+  float: left;
+  width: 30mm;
+}
+dt:after {
+  content: ":";
+}
+
+dd {
+  margin-left: 30mm;
+  font-family: "menlo";
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="card">
+  <h2>JSON</h2>
+  <dl>
+    <dt>Suffix</dt><dd>.json</dd>
+    <dt>Media-type</dt><dd>application/json</dd>
+    <dt>Standard</dt><dd>RFC 7159</dd>
+  </dl>
+  <pre class="example">
+{
+  "hash": "48a96007ceb115ed1c909a228a3b5de998a40fc8",
+  "entry": {
+    "address": "10091863144",
+    "area": "Camden",
+    "country": "GB",
+    "latitude": "51.516959783892126",
+    "locality": "",
+    "longitude": "-0.12058689785602611",
+    "postcode": "WC2B 6NH",
+    "property": "The Food Standards Agency Aviation House",
+    "street": "125-129 Kingsway",
+    "town": "London"
+  },
+  "last-updated": "2015-06-11T18:01:25.618Z"
+}
+</pre>
+</div>
+
+<div class="card">
+  <h2>Turtle</h2>
+  <dl>
+    <dt>Suffix</dt><dd>.ttl</dd>
+    <dt>Media-type</dt><dd>text/turtle; charset=utf-8</dd>
+    <dt>Standard</dt><dd>W3C RDF 1.1 Turtle</dd>
+  </dl>
+  <pre class="example">
+@prefix field: &lt;http://field.openregister.org/field/&gt;.
+
+&lt;http://school.openregister.org/hash/3d683f73b3bf64b9912ef853b6614c01d8b37544&gt;
+  field:school &lt;http://school.openregister.org/school/100001&gt; ;
+  field:name "City of London School for Girls" ;
+  field:start-date "1920-01-01" ;
+  field:end-date "" ;
+  field:gender "" ;
+  field:religious-character "Church of England" ;
+  field:minimum-age "7" ;
+  field:maximum-age "17" ;
+  field:headteacher "Mrs Ena Harrop" ;
+  field:website "http://www.clsg.org.uk" ;
+  field:address &lt;http://address.openregister.org/address/200000074660&gt; .
+</pre>
+</div>
+
+<div class="card">
+  <h2>JSON-LD</h2>
+  <dl>
+    <dt>Suffix</dt><dd>.jsonld</dd>
+    <dt>Media-type</dt><dd>application/ld+json</dd>
+    <dt>Standard</dt><dd>W3C JSON-LD 1.0</dd>
+  </dl>
+  <pre class="example">
+{
+  "@context": {
+    "field": "http://field.openregister.org/field/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "http://school.openregister.org/hash/a90dedbbb2b14909be642e48eede98af301cf6e8",
+  "field:address": {
+    "@id": "http://address.openregister.org/address/200000072075"
+  },
+  "field:end-date": "",
+  "field:gender": "",
+  "field:headteacher": "Mr Neil Chippington",
+  "field:maximum-age": "12",
+  "field:minimum-age": "4",
+  "field:name": "St Paul's Cathedral School",
+  "field:religious-character": "Christian",
+  "field:school": {
+    "@id": "http://school.openregister.org/school/100002"
+  },
+  "field:start-date": "1939-01-01",
+  "field:website": "http://www.stpauls.co.uk/school/school.htm"
+}
+</pre>
+</div>
+
+</div>
+<div class="page">
+
+<div class="card">
+  <h2>RDFa</h2>
+  <dl>
+    <dt>Suffix</dt><dd>.html</dd>
+    <dt>Media-type</dt><dd>text/html</dd>
+    <dt>Standard</dt><dd>W3C RDFa Lite 1.1</dd>
+  </dl>
+  <pre class="example">
+&lt;div xmlns="http://www.w3.org/1999/xhtml"
+  prefix="
+    field: http://field.openregister.org/field/
+    rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+    rdfs: http://www.w3.org/2000/01/rdf-schema#"
+  &gt;
+  &lt;div typeof="rdfs:Resource" about="http://school.openregister.org/hash/a90dedbbb2b14909be642e48eede98af301cf6e8"&gt;
+    &lt;div property="field:end-date" content=""&gt;&lt;/div&gt;
+    &lt;div property="field:minimum-age" content="4"&gt;&lt;/div&gt;
+    &lt;div property="field:gender" content=""&gt;&lt;/div&gt;
+    &lt;div property="field:headteacher" content="Mr Neil Chippington"&gt;&lt;/div&gt;
+    &lt;div property="field:religious-character" content="Christian"&gt;&lt;/div&gt;
+    &lt;div rel="field:school" resource="http://school.openregister.org/school/100002"&gt;&lt;/div&gt;
+    &lt;div property="field:maximum-age" content="12"&gt;&lt;/div&gt;
+    &lt;div property="field:name" content="St Paul's Cathedral School"&gt;&lt;/div&gt;
+    &lt;div property="field:website" content="http://www.stpauls.co.uk/school/school.htm"&gt;&lt;/div&gt;
+    &lt;div property="field:start-date" content="1939-01-01"&gt;&lt;/div&gt;
+    &lt;div rel="field:address" resource="http://address.openregister.org/address/200000072075"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</div>
+
+<div class="card">
+  <h2>Atom</h2>
+  <dl>
+    <dt>Suffix</dt><dd>.atom</dd>
+    <dt>Media-type</dt><dd>application/atom+xml</dd>
+    <dt>Standard</dt><dd>RFC 4287</dd>
+  </dl>
+  <pre class="example">
+&lt;feed xmlns:f=&quot;http://fields.openregister.org/field/&quot;
+  xmlns:dt=&quot;http://fields.openregister.org/datatype/&quot;
+  xmlns=&quot;http://www.w3.org/2005/Atom&quot;&gt;
+  &lt;title&gt;Address register updates&lt;/title&gt;
+  &lt;id&gt;http://address.openregister.org/address/latest.atom&lt;/id&gt;
+  &lt;link rel=&quot;self&quot; href=&quot;http://address.openregister.org/address/&quot;/&gt;
+  &lt;updated&gt;2015-06-11T18:01:25.125+00:00&lt;/updated&gt;
+  &lt;author&gt;&lt;name&gt;openregister.org&lt;/name&gt;&lt;/author&gt;
+&lt;entry&gt;
+  &lt;id&gt;urn:hash:48a96007ceb115ed1c909a228a3b5de998a40fc8&lt;/id&gt;
+  &lt;title&gt;http://address.openregister.org/hash/48a96007ceb115ed1c909a228a3b5de998a40fc8&lt;/title&gt;
+  &lt;updated&gt;2015-06-11T18:01:25.125+00:00&lt;/updated&gt;
+  &lt;author&gt;&lt;name&gt;openregister.org&lt;/name&gt;&lt;/author&gt;
+  &lt;link href=&quot;http://address.openregister.org/hash/48a96007ceb115ed1c909a228a3b5de998a40fc8&quot;&gt;&lt;/link&gt;
+  &lt;content type=&quot;application/xml&quot;&gt;
+    &lt;f:address&gt;http://address.openregister.org/address/10091863144&lt;/f:address&gt;
+    &lt;f:property&gt;http://property.openregister.org/property/The%20Food%20Standards%20Agency%20Aviation%20House&lt;/f:property&gt;
+    &lt;f:street&gt;125-129 Kingsway&lt;/f:street&gt;
+    &lt;f:locality&gt;&lt;/f:locality&gt;
+    &lt;f:town&gt;London&lt;/f:town&gt;
+    &lt;f:area&gt;Camden&lt;/f:area&gt;
+    &lt;f:postcode&gt;http://postcode.openregister.org/postcode/WC2B%206NH&lt;/f:postcode&gt;
+    &lt;f:country&gt;http://country.openregister.org/country/GB&lt;/f:country&gt;
+    &lt;f:latitude&gt;51.516959783892126&lt;/f:latitude&gt;
+    &lt;f:longitude&gt;-0.12058689785602611&lt;/f:longitude&gt;
+    &lt;/content&gt;
+&lt;/entry&gt;
+&lt;/feed&gt;
+</pre>
+</div>
+
+
+<div class="card">
+  <h2>YAML</h2>
+  <dl>
+    <dt>Suffix</dt><dd>.yaml</dd>
+    <dt>Media-type</dt><dd>text/yaml; charset=utf-8</dd>
+    <dt>Standard</dt><dd></dd>
+  </dl>
+  <pre class="example">
+---
+hash: "48a96007ceb115ed1c909a228a3b5de998a40fc8"
+entry:
+  area: "Camden"
+  town: "London"
+  street: "125-129 Kingsway"
+  address: "10091863144"
+  country: "GB"
+  latitude: "51.516959783892126"
+  locality: ""
+  postcode: "WC2B 6NH"
+  property: "The Food Standards Agency Aviation House"
+  longitude: "-0.12058689785602611"
+last-updated: "2015-06-11T18:01:25.618Z"
+</pre>
+</div>
+</div>
+
+<div class="page">
+
+<div class="card">
+  <h2>CSV</h2>
+  <dl>
+    <dt>Suffix</dt><dd>.csv</dd>
+    <dt>Media-type</dt><dd>text/csv; charset=utf-8</dd>
+    <dt>Standard</dt><dd>RFC 4180</dd>
+  </dl>
+  <pre class="example">
+hash,address,property,street,locality,town,area,postcode,country,latitude,longitude,last-updated
+33b9799c0bce8628e89801993a3640b1cb077bb4,10002759804,,1 Tidmarsh Lane,,Oxford,Oxfordshire,OX1 1AZ,GB,51.751978526533605,-1.2635430210391678,2015-06-11T13:19:26.323Z
+</pre>
+</div>
+
+<div class="card">
+  <h2>TSV</h2>
+  <dl>
+    <dt>Suffix</dt><dd>.tsv</dd>
+    <dt>Media-type</dt><dd>text/tab-separated-values; charset=utf-8</dd>
+    <dt>Standard</dt><dd>RFC 4180</dd>
+  </dl>
+  <pre class="example">
+hash	address	property	street	locality	town	area	postcode	country	latitude	longitude	last-updated
+33b9799c0bce8628e89801993a3640b1cb077bb4	10002759804		1 Tidmarsh Lane		Oxford	Oxfordshire	OX1 1AZ	GB	51.751978526533605	-1.2635430210391678	2015-06-11T13:19:26.323Z
+</pre>
+</div>
+
+<div class="card">
+  <h2>geoJSON</h2>
+  <dl>
+    <dt>Suffix</dt><dd>.geojson</dd>
+    <dt>Media-type</dt><dd>application/vnd.geo+json</dd>
+    <dt>Standard</dt><dd>RFC 4180</dd>
+  </dl>
+  <pre class="example">
+</pre>
+</div>
+
+</div>
+</body>
+</html>
