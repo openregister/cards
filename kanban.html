@@ -1,0 +1,137 @@
+<!doctype html> <html>
+<head>
+<link rel="stylesheet" type="text/css" href="crests.css" />
+<style>
+body {
+  font-family: "San Francisco Display", "Helvetica Neue", sans-serif;
+  font-size: 3.5mm;
+}
+
+.page {
+  width: 297mm;
+  height: 210mm;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  padding: 0;
+  width: 150mm;
+  height: 105mm;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  border: 1px dotted #888;
+}
+
+h2 {
+  font-size: 10mm;
+  padding: 5mm;
+  margin: 0;
+}
+
+h3 {
+  position: absolute;
+  bottom: 0;
+}
+
+.middle {
+  display: table;
+  border-top: 2.5mm solid #000000;
+  border-bottom: 2.5mm solid #000000;
+  height: 57mm;
+}
+
+.example {
+  display: table-cell;
+  width: 70mm;
+  padding: 5mm;
+  overflow: hidden;
+  border-right: 2.5mm solid #000000;
+}
+
+.example dt {
+  font-weight: bold;
+}
+
+.example dd {
+  font-weight: normal;
+}
+.meta {
+  padding: 5mm;
+}
+
+dl {
+  display: table-cell;
+  width: 70mm;
+  height: 52.5mm;
+}
+dt {
+  float: left;
+  min-width: 25mm;
+  clear: both;
+}
+
+dd {
+  margin-left: 25mm;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 37.5mm;
+}
+
+dt:after {
+  content: ":";
+}
+dd {
+  font-weight: bold;
+}
+
+
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="card">
+  <h2>school</h2>
+  <h3 class="organisation department-for-education">Department for Education</h3>
+  <div class="middle">
+    <dl class="example">
+      <dt>school</dt><dd>40216</dd>
+      <dt>name</dt><dd>Sacred Heart<dd>
+      <dt>address</dt><dd>10091863144<dd>
+      <dt>gender</dt><dd>Girls<dd>
+      <dt>religious-character</dt><dd>Roman Catholic<dd>
+      <dt>start-date</dt><dd>1926-01-01<dd>
+      <dt>website</dt><dd>http://www.sacred-heart-primary.torbay.sch.uk/<dd>
+      <dt>headteacher</dt><dd>Helen Brown<dd>
+    </dl>
+    <dl class="meta">
+      <dt>Custodian</dt><dd>Andrew Thompson</dd>
+      <dt>Records</dt><dd>30,568</dd>
+      <dt>Entries</dt><dd>5/day</dd>
+      <dt>Features</dt><dd></dd>
+    </dl>
+  </div>
+</div>
+
+<div class="blank card">
+  <h2>school</h2>
+  <h3 class="organisation department-for-education">Department for Education</h3>
+  <div class="middle">
+    <dl class="example">
+    </dl>
+    <dl class="meta">
+      <dt>Custodian</dt><dd>&nbsp;</dd>
+      <dt>Records</dt><dd>&nbsp;</dd>
+      <dt>Entries</dt><dd>&nbsp;</dd>
+      <dt>Features</dt><dd>&nbsp;</dd>
+    </dl>
+  </div>
+</div>
+
+</div>
+</body>
+</html>
