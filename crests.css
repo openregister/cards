@@ -1,0 +1,17 @@
+.organisation {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  margin-left: 5mm;
+  border-left: 2px solid;
+  background-repeat: no-repeat;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
+  padding: 0 44px;
+}
+
+.department-for-education {
+  background-position: 6px center;
+  border-color: #003a69;
+  background-image: url(https://assets.digital.cabinet-office.gov.uk/government/assets/crests/org_crest_18px.png);
+  background-size: 25px auto 
+}
