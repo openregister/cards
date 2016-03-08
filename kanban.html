@@ -9,7 +9,7 @@ body {
 
 .page {
   width: 297mm;
-  height: 210mm;
+  height: 200mm;
   overflow: hidden;
   display: flex;
   justify-content: space-between;
@@ -18,7 +18,7 @@ body {
 .card {
   padding: 0;
   width: 150mm;
-  height: 105mm;
+  height: 100mm;
   float: left;
   overflow: hidden;
   position: relative;
@@ -26,7 +26,7 @@ body {
 }
 
 h2 {
-  font-size: 10mm;
+  font-size: 5mm;
   padding: 5mm;
   margin: 0;
 }
@@ -38,15 +38,14 @@ h3 {
 
 .middle {
   display: table;
-  border-top: 2.5mm solid #000000;
   border-bottom: 2.5mm solid #000000;
   height: 57mm;
 }
 
-.example {
+.example,
+.dependencies {
   display: table-cell;
-  width: 70mm;
-  padding: 5mm;
+  width: 75mm;
   overflow: hidden;
   border-right: 2.5mm solid #000000;
 }
@@ -59,33 +58,19 @@ h3 {
   font-weight: normal;
 }
 .meta {
-  padding: 5mm;
+  width: 75mm;
 }
 
-dl {
-  display: table-cell;
-  width: 70mm;
-  height: 52.5mm;
-}
-dt {
-  float: left;
-  min-width: 25mm;
-  clear: both;
+.block {
+  border-top: 2.5mm solid #000000;
 }
 
-dd {
-  margin-left: 25mm;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 37.5mm;
-}
-
-dt:after {
-  content: ":";
-}
-dd {
-  font-weight: bold;
+h4 {
+  font-weight: normal;
+  margin: 0;
+  padding-left: 2.5mm;
+  padding-top: 2.5mm;
+  padding-bottom: 7.5mm;
 }
 
 
@@ -93,44 +78,117 @@ dd {
 </head>
 <body>
 <div class="page">
+<div class="row">
+  <div class="blank card">
+    <h2>&nbsp;</h2>
+    <h3 class="organisation blank-organisation">&nbsp;</h3>
+    <div class="middle">
+      <div class="dependencies">
+        <div class="block">
+          <h4>Links to</h4>
+        </div>
+      </div>
+      <div class="meta">
+        <div class="block">
+          <h4>Custodian</h4>
+        </div>
+        <div class="block">
+          <h4>Records</h4>
+        </div>
+        <div class="block">
+          <h4>Entries</h4>
+        </div>
+        <div class="block">
+          <h4>New features</h4>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<div class="card">
-  <h2>school</h2>
-  <h3 class="organisation department-for-education">Department for Education</h3>
-  <div class="middle">
-    <dl class="example">
-      <dt>school</dt><dd>40216</dd>
-      <dt>name</dt><dd>Sacred Heart<dd>
-      <dt>address</dt><dd>10091863144<dd>
-      <dt>gender</dt><dd>Girls<dd>
-      <dt>religious-character</dt><dd>Roman Catholic<dd>
-      <dt>start-date</dt><dd>1926-01-01<dd>
-      <dt>website</dt><dd>http://www.sacred-heart-primary.torbay.sch.uk/<dd>
-      <dt>headteacher</dt><dd>Helen Brown<dd>
-    </dl>
-    <dl class="meta">
-      <dt>Custodian</dt><dd>Andrew Thompson</dd>
-      <dt>Records</dt><dd>30,568</dd>
-      <dt>Entries</dt><dd>5/day</dd>
-      <dt>Features</dt><dd></dd>
-    </dl>
+  <div class="blank card">
+    <h2>&nbsp;</h2>
+    <h3 class="organisation blank-organisation">&nbsp;</h3>
+    <div class="middle">
+      <div class="dependencies">
+        <div class="block">
+          <h4>Links to</h4>
+        </div>
+      </div>
+      <div class="meta">
+        <div class="block">
+          <h4>Custodian</h4>
+        </div>
+        <div class="block">
+          <h4>Records</h4>
+        </div>
+        <div class="block">
+          <h4>Entries</h4>
+        </div>
+        <div class="block">
+          <h4>New features</h4>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
-<div class="blank card">
-  <h2>school</h2>
-  <h3 class="organisation department-for-education">Department for Education</h3>
-  <div class="middle">
-    <dl class="example">
-    </dl>
-    <dl class="meta">
-      <dt>Custodian</dt><dd>&nbsp;</dd>
-      <dt>Records</dt><dd>&nbsp;</dd>
-      <dt>Entries</dt><dd>&nbsp;</dd>
-      <dt>Features</dt><dd>&nbsp;</dd>
-    </dl>
+<div class="row">
+  <div class="blank card">
+    <h2>&nbsp;</h2>
+    <h3 class="organisation blank-organisation">&nbsp;</h3>
+    <div class="middle">
+      <div class="dependencies">
+        <div class="block">
+          <h4>Links to</h4>
+        </div>
+      </div>
+      <div class="meta">
+        <div class="block">
+          <h4>Custodian</h4>
+        </div>
+        <div class="block">
+          <h4>Records</h4>
+        </div>
+        <div class="block">
+          <h4>Entries</h4>
+        </div>
+        <div class="block">
+          <h4>New features</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="blank card">
+    <h2>&nbsp;</h2>
+    <h3 class="organisation blank-organisation">&nbsp;</h3>
+    <div class="middle">
+      <div class="dependencies">
+        <div class="block">
+          <h4>Links to</h4>
+        </div>
+      </div>
+      <div class="meta">
+        <div class="block">
+          <h4>Custodian</h4>
+        </div>
+        <div class="block">
+          <h4>Records</h4>
+        </div>
+        <div class="block">
+          <h4>Entries</h4>
+        </div>
+        <div class="block">
+          <h4>New features</h4>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+
+</div>
+
+
 
 </div>
 </body>

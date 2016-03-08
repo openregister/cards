@@ -9,9 +9,18 @@
   padding: 0 44px;
 }
 
-.department-for-education {
+.blank-organisation {
+  border-color: #000000;
+
   background-position: 6px center;
+  background-image: url(https://assets.digital.cabinet-office.gov.uk/government/assets/crests/org_crest_18px.png);
+  background-size: 25px auto 
+}
+
+.department-for-education {
   border-color: #003a69;
+
+  background-position: 6px center;
   background-image: url(https://assets.digital.cabinet-office.gov.uk/government/assets/crests/org_crest_18px.png);
   background-size: 25px auto 
 }
